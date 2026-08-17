@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NETFLIX - Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="premium.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="feature.css">
+</head>
+<body class="auth-page"><div class="auth-bg-video"><iframe src="https://www.youtube.com/embed/dXQWzwGcACc?autoplay=1&mute=1&controls=0&loop=1&playlist=dXQWzwGcACc&modestbranding=1&rel=0" allow="autoplay; encrypted-media" frameborder="0"></iframe></div><div class="auth-bg-overlay"></div>
+<header class="auth-header">
+    <a href="index.html" class="logo">NET<span>FLIX</span></a>
+</header>
+
+<main class="auth-main">
+    <div class="auth-card">
+        <h1>Sign In</h1>
+
+        <form id="loginForm">
+            <input type="email" id="loginEmail" placeholder="Email address" required>
+            <input type="password" id="loginPassword" placeholder="Password" required>
+            <button type="submit" class="btn btn-red full">Sign In</button>
+        </form>
+
+        <div id="otpSection" class="otp-box" style="display:none;">
+            <p class="small-note">A 6-digit OTP has been sent to your registered email.</p>
+            <input type="text" id="otpInput" placeholder="Enter 6-digit OTP" maxlength="6" inputmode="numeric">
+            <button type="button" id="verifyOtp" class="btn btn-red full">Verify OTP</button>
+            <button type="button" id="resendOtp" class="btn btn-secondary full">Resend OTP</button>
+            <p id="otpMessage" class="small-note"></p>
+        </div>
+
+        <div class="or"><span>OR</span></div>
+        <button type="button" id="quickLogin" class="btn btn-secondary full">Use Demo Account</button>
+
+        <div class="auth-options">
+            <label><input type="checkbox"> Remember me</label>
+            <a href="#" id="forgotPassword">Forgot password?</a>
+        </div>
+
+        <p class="auth-bottom">New to NETFLIX? <a href="signup.html">Sign up now.</a></p>
+        <p class="small-note">Demo account is available for testing this student project.</p>
+    </div>
+
+    <div id="forgotModal" class="feature-modal" style="display:none;">
+        <div class="feature-modal-card">
+            <button class="modal-close" id="closeForgot">×</button>
+            <h2>Reset Password</h2>
+            <p class="small-note">Enter your registered email. We will send an OTP.</p>
+            <input type="email" id="resetEmail" placeholder="Email address">
+            <button class="btn btn-red full" id="sendResetOtp">Send OTP</button>
+            <div id="resetOtpArea" style="display:none;">
+                <input type="text" id="resetOtp" placeholder="Enter OTP" maxlength="6" inputmode="numeric">
+                <input type="password" id="newPassword" placeholder="New password" minlength="6">
+                <button class="btn btn-red full" id="resetPasswordBtn">Reset Password</button>
+            </div>
+            <p id="resetMessage" class="small-note"></p>
+        </div>
+    </div>
+</main>
+
+<p class="small-note otp-server-note">🔐 Login uses real email OTP verification through the included NETFIX OTP server.</p>
+<script src="login.js"></script>
+</body>
+</html>

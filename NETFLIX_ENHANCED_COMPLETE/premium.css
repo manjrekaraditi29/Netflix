@@ -1,0 +1,290 @@
+/* ======================================================
+   NETFIX PREMIUM VISUAL UPGRADE
+   Additive stylesheet - original CSS files are preserved.
+====================================================== */
+
+/* ---------- Landing page ---------- */
+.hero {
+    min-height: 88vh;
+    justify-content: center;
+    text-align: center;
+    padding: 130px 6% 90px;
+    background-image: url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=2200&q=90");
+    background-position: center;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(229,9,20,.12), transparent 48%);
+    pointer-events: none;
+}
+
+.hero-overlay {
+    background:
+        linear-gradient(180deg, rgba(0,0,0,.72) 0%, rgba(0,0,0,.32) 42%, rgba(5,5,5,.98) 100%),
+        linear-gradient(90deg, rgba(0,0,0,.5), transparent 50%, rgba(0,0,0,.5));
+}
+
+.hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero .eyebrow {
+    color: #fff;
+    opacity: .8;
+    letter-spacing: 5px;
+}
+
+.hero h1 {
+    font-size: clamp(3.2rem, 7vw, 6.8rem);
+    text-shadow: 0 10px 40px rgba(0,0,0,.7);
+}
+
+.hero h2 {
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    font-weight: 500;
+}
+
+.hero p:not(.eyebrow) {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-large {
+    box-shadow: 0 10px 30px rgba(229,9,20,.3);
+}
+
+/* ---------- App hero ---------- */
+.home-hero {
+    min-height: 78vh;
+    background-image: url("https://image.tmdb.org/t/p/original/xJHokMbljvjADYdit5fK5v3B0k1.jpg");
+    background-position: center;
+}
+
+.home-hero-overlay {
+    background:
+        linear-gradient(90deg, rgba(0,0,0,.94) 0%, rgba(0,0,0,.56) 45%, rgba(0,0,0,.12) 100%),
+        linear-gradient(0deg, #050505 0%, transparent 48%, rgba(0,0,0,.2) 100%);
+}
+
+.home-hero-content {
+    max-width: 680px;
+}
+
+.home-hero h1 {
+    letter-spacing: -2px;
+    text-shadow: 0 8px 30px rgba(0,0,0,.7);
+}
+
+.tag {
+    box-shadow: 0 8px 25px rgba(229,9,20,.28);
+}
+
+/* ---------- Section polish ---------- */
+.content-section {
+    position: relative;
+    padding-top: 28px;
+}
+
+.section-heading h2 {
+    font-size: clamp(1.25rem, 2vw, 1.7rem);
+}
+
+.section-heading a:hover {
+    color: #fff;
+}
+
+.movie-row {
+    overflow: visible;
+}
+
+.movie-card {
+    border: 1px solid rgba(255,255,255,.045);
+    box-shadow: 0 8px 22px rgba(0,0,0,.2);
+}
+
+.movie-card img {
+    transition: transform .35s ease, filter .35s ease;
+}
+
+.movie-card:hover img {
+    transform: scale(1.04);
+    filter: brightness(1.08);
+}
+
+.movie-title-link:hover {
+    color: #e50914;
+}
+
+.mini-rating {
+    min-height: 17px;
+}
+
+/* ---------- Netflix-style Top 10 numbers ---------- */
+.top10-section {
+    padding-top: 35px;
+}
+
+.top10-row {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.top10-card {
+    position: relative;
+    min-width: 0;
+    height: 300px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.top10-number {
+    position: absolute;
+    left: -7px;
+    bottom: -27px;
+    z-index: 1;
+    font-size: clamp(8rem, 14vw, 12rem);
+    line-height: .8;
+    font-weight: 950;
+    color: #050505;
+    -webkit-text-stroke: 2px #777;
+    text-shadow: 5px 0 0 #777;
+    user-select: none;
+}
+
+.top10-poster {
+    position: relative;
+    z-index: 2;
+    width: 78%;
+    height: 94%;
+    margin-left: auto;
+    object-fit: cover;
+    border-radius: 7px;
+    box-shadow: -15px 0 25px rgba(0,0,0,.55);
+    transition: transform .3s ease;
+}
+
+.top10-card:hover .top10-poster {
+    transform: scale(1.04) translateY(-5px);
+}
+
+.top10-label {
+    position: absolute;
+    z-index: 4;
+    left: 10px;
+    top: 10px;
+    background: rgba(0,0,0,.78);
+    border: 1px solid rgba(255,255,255,.18);
+    border-radius: 4px;
+    padding: 5px 8px;
+    font-size: .65rem;
+    font-weight: 800;
+}
+
+.top10-info {
+    position: absolute;
+    z-index: 5;
+    left: 22%;
+    right: 2%;
+    bottom: 0;
+    padding: 45px 10px 10px;
+    background: linear-gradient(transparent, rgba(0,0,0,.95));
+}
+
+.top10-info h3 {
+    font-size: .9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.top10-info p {
+    color: #aaa;
+    font-size: .7rem;
+    margin-top: 3px;
+}
+
+/* ---------- Category chips ---------- */
+.category-strip {
+    display: flex;
+    gap: 9px;
+    flex-wrap: wrap;
+    margin-top: 5px;
+    margin-bottom: 8px;
+}
+
+.category-chip {
+    padding: 7px 13px;
+    border: 1px solid #333;
+    border-radius: 999px;
+    color: #bbb;
+    background: #151515;
+    font-size: .78rem;
+    transition: .2s ease;
+}
+
+.category-chip:hover {
+    border-color: #e50914;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* ---------- Landing feature strip ---------- */
+.landing-feature-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 6% 80px;
+}
+
+.landing-feature-card {
+    padding: 28px;
+    border: 1px solid #292929;
+    border-radius: 14px;
+    background: linear-gradient(145deg, #171717, #0b0b0b);
+    text-align: center;
+}
+
+.landing-feature-card .feature-icon {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.landing-feature-card h3 {
+    margin-bottom: 8px;
+}
+
+.landing-feature-card p {
+    color: #999;
+    line-height: 1.6;
+    font-size: .9rem;
+}
+
+/* ---------- Small polish for auth ---------- */
+.auth-card {
+    box-shadow: 0 25px 70px rgba(0,0,0,.55);
+    border: 1px solid rgba(255,255,255,.08);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1000px) {
+    .top10-row { grid-template-columns: repeat(5, minmax(125px, 1fr)); overflow-x: auto; padding-bottom: 10px; }
+    .top10-card { min-width: 125px; }
+    .landing-feature-strip { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 700px) {
+    .hero { min-height: 82vh; padding: 120px 6% 70px; }
+    .hero h1 { font-size: clamp(2.7rem, 12vw, 4.5rem); }
+    .home-hero { min-height: 72vh; }
+    .top10-row { grid-template-columns: repeat(5, 125px); }
+    .top10-card { height: 245px; }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "netfix-student-project",
+  "version": "1.0.0",
+  "description": "NETFIX student streaming project with real email OTP verification and additional movie features.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "nodemailer": "^7.0.5"
+  }
+}

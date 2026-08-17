@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NETFIX - Create Account</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="premium.css">
+<link rel="stylesheet" href="login.css">
+</head>
+<body class="auth-page signup-page">
+<div class="auth-bg-video"><iframe src="https://www.youtube.com/embed/dXQWzwGcACc?autoplay=1&mute=1&controls=0&loop=1&playlist=dXQWzwGcACc&modestbranding=1&rel=0" allow="autoplay; encrypted-media" frameborder="0"></iframe></div>
+<div class="auth-bg-overlay"></div>
+<header class="auth-header"><a href="index.html" class="logo">NET<span>FLIX</span></a></header>
+
+<main class="auth-main">
+<div class="auth-card signup-card">
+<p class="eyebrow">JOIN NETFIX</p>
+<h1 id="signupTitle">Create Account</h1>
+<p class="muted" id="signupSubtitle">Create your account, verify your email, and start watching.</p>
+
+<form id="signupForm">
+<input type="text" id="signupName" placeholder="Full Name" required>
+<input type="email" id="signupEmail" placeholder="Email Address" required>
+<input type="password" id="signupPassword" placeholder="Create Password" minlength="6" required>
+<select id="signupPlan" required>
+<option value="">Choose a Plan</option><option value="Basic">Basic - ₹149/month</option><option value="Standard">Standard - ₹299/month</option><option value="Premium">Premium - ₹499/month</option>
+</select>
+<button type="submit" class="btn btn-red full" id="createAccountBtn">Create Account</button>
+</form>
+
+<div id="signupOtpSection" class="otp-box" style="display:none;">
+<div class="otp-icon">✉</div>
+<h2>Verify your email</h2>
+<p class="small-note">We sent a 6-digit verification code to <strong id="signupOtpEmail"></strong>.</p>
+<input type="text" id="signupOtpInput" placeholder="Enter 6-digit OTP" maxlength="6" inputmode="numeric" autocomplete="one-time-code">
+<button type="button" id="verifySignupOtp" class="btn btn-red full">Verify &amp; Continue</button>
+<button type="button" id="resendSignupOtp" class="btn btn-secondary full">Resend OTP</button>
+<p id="signupOtpMessage" class="small-note"></p>
+</div>
+
+<p class="auth-bottom">Already have an account? <a href="login.html">Sign In</a></p>
+<p class="small-note">Your account is activated only after the email OTP is verified.</p>
+</div>
+</main>
+<script src="login.js"></script>
+</body>
+</html>

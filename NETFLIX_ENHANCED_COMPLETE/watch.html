@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>NETFLIX - Watch Movie</title>
+
+
+    <!-- Existing CSS -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="home.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="responsive.css"
+    >
+
+
+    <!-- NEW CSS -->
+
+    <link
+        rel="stylesheet"
+        href="movie-pages.css"
+    >
+
+    <link rel="stylesheet" href="feature.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ==================================================
+     NAVBAR
+================================================== -->
+
+<header class="movie-page-header">
+
+
+    <div class="movie-page-logo">
+
+        <a href="home.html">
+
+            NETFLIX
+
+        </a>
+
+    </div>
+
+
+    <nav class="movie-page-nav">
+
+        <a href="home.html">
+            Home
+        </a>
+
+        <a href="search.html">
+            Search
+        </a>
+
+        <a href="mylist.html">
+            My List
+        </a>
+
+        <a href="profile.html">
+            Profile
+        </a>
+
+    </nav>
+
+
+</header>
+
+
+
+<!-- ==================================================
+     WATCH PAGE
+================================================== -->
+
+<main class="watch-page">
+
+
+    <div class="watch-container">
+
+
+        <div class="watch-top">
+
+
+            <button
+                class="back-button"
+                onclick="goBackToDetails()"
+            >
+
+                ← Back
+
+            </button>
+
+
+            <span>
+
+                NETFLIX
+
+            </span>
+
+
+        </div>
+
+
+
+        <!-- TITLE -->
+
+        <h1 id="watchTitle">
+
+            Loading...
+
+        </h1>
+
+
+
+        <!-- VIDEO -->
+
+        <div class="video-container">
+
+
+            <video
+                id="moviePlayer"
+                controls
+                playsinline
+                poster=""
+            >
+
+
+                <!-- Demo video -->
+
+                <source
+                    src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+                    type="video/mp4"
+                >
+
+
+                Your browser does not support
+                HTML5 video.
+
+
+            </video>
+
+
+        </div>
+
+
+
+        <!-- MOVIE INFORMATION -->
+
+        <div class="watch-info">
+
+
+            <div>
+
+                <h2 id="watchMovieTitle">
+
+                    Movie
+
+                </h2>
+
+
+                <p id="watchMovieInfo">
+
+                    Loading...
+
+                </p>
+
+            </div>
+
+
+            <button
+                class="home-button"
+                onclick="goHome()"
+            >
+
+                Home
+
+            </button>
+
+
+        </div>
+
+
+        <div class="watch-message">
+
+            <span>
+                ●
+            </span>
+
+            You are watching on NETFLIX
+
+        </div>
+
+
+    </div>
+
+
+</main>
+
+
+
+<!-- ==================================================
+     FOOTER
+================================================== -->
+
+<footer class="movie-page-footer">
+
+    <p>
+
+        © 2026 NETFLIX.
+        All Rights Reserved.
+
+    </p>
+
+</footer>
+
+
+
+<!-- ==================================================
+     JAVASCRIPT
+================================================== -->
+
+<script src="app.js"></script>
+
+<script src="watch.js"></script>
+
+
+</body>
+
+</html>

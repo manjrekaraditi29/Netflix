@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NETFIX - Home</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="home.css">
+<link rel="stylesheet" href="feature.css">
+<link rel="stylesheet" href="premium.css">
+</head>
+<body class="app-page">
+
+<header class="app-navbar netflix-navbar">
+  <a href="home.html" class="logo">NET<span>FLIX</span></a>
+
+  <nav class="main-nav">
+    <a class="active" href="#home">Home</a>
+    <a href="#shows">Shows</a>
+    <a href="#movies">Movies</a>
+    <a href="#games">Games</a>
+    <a href="#new-popular">New &amp; Popular</a>
+    <a href="mylist.html">My List</a>
+    <a href="#languages">Browse by Languages</a>
+  </nav>
+
+  <div class="nav-tools">
+    <a class="nav-icon search-nav" href="search.html" title="Search">⌕</a>
+    <div class="notification-wrap" id="notificationWrap">
+      <button class="nav-icon" id="notificationBtn" title="Notifications">♢<span class="notification-dot"></span></button>
+      <div class="notification-panel" id="notificationPanel">
+        <div class="notification-head"><strong>Notifications</strong><span>NETFIX</span></div>
+        <div id="notificationList"></div>
+      </div>
+    </div>
+    <div class="profile-switcher">
+      <button class="profile-trigger" id="profileTrigger">
+        <span class="avatar" id="navAvatar">G</span><span class="profile-arrow">⌄</span>
+      </button>
+      <div class="profile-switcher-menu">
+        <div id="profileSwitcherList"></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="home">
+<section class="home-hero">
+  <div class="hero-video">
+    <iframe
+      src="https://www.youtube.com/embed/dXQWzwGcACc?autoplay=1&mute=1&controls=0&loop=1&playlist=dXQWzwGcACc&modestbranding=1&rel=0"
+      title="Interstellar official trailer"
+      allow="autoplay; encrypted-media"
+      frameborder="0"></iframe>
+  </div>
+  <div class="home-hero-overlay"></div>
+  <div class="home-hero-content">
+    <span class="tag">#1 MOVIE OF TODAY</span>
+    <h1>INTERSTELLAR</h1>
+    <p class="hero-meta">2014 <b>•</b> 2h 49m <b>•</b> PG-13 <b>•</b> Sci-Fi</p>
+    <p>When humanity faces an uncertain future, a team of explorers travels beyond our galaxy to search for a new home.</p>
+    <div class="hero-buttons">
+      <button class="btn btn-light btn-large" onclick="playMovie(1)">▶ Play</button>
+      <button class="btn btn-glass btn-large" onclick="addFeatured()">＋ My List</button>
+    </div>
+  </div>
+</section>
+
+<section class="quick-strip" id="shows">
+  <a href="#top-searches">Top Searches</a><a href="#top10">Top 10</a><a href="#new-popular">New on NETFIX</a><a href="#hindi">Hindi</a><a href="#romantic">Romantic</a>
+</section>
+
+<section class="content-section" id="top-searches">
+  <div class="section-heading"><h2>Top Searches</h2><a href="search.html">See all →</a></div>
+  <div class="movie-row" id="topSearchesRow"></div>
+</section>
+
+<section class="content-section top10-section" id="top10">
+  <div class="section-heading"><h2>Top 10 Shows in India Today</h2><a href="search.html">Explore →</a></div>
+  <div class="top10-row" id="top10Row"></div>
+</section>
+
+<section class="content-section" id="new-popular">
+  <div class="section-heading"><h2>Today's Top Picks for You</h2></div>
+  <div class="movie-row" id="topPicksRow"></div>
+</section>
+
+<section class="content-section">
+  <div class="section-heading"><h2>New on NETFIX</h2></div>
+  <div class="movie-row" id="newNetflixRow"></div>
+</section>
+
+<section class="content-section">
+  <div class="section-heading"><h2>Familiar Favourites</h2></div>
+  <div class="movie-row" id="familiarRow"></div>
+</section>
+
+<section class="content-section" id="movies">
+  <div class="section-heading"><h2>TV Dramas</h2></div>
+  <div class="movie-row" id="dramaRow"></div>
+</section>
+
+<section class="content-section">
+  <div class="section-heading"><h2>Continue Watching</h2></div>
+  <div class="movie-row" id="continueRow"></div>
+</section>
+
+<section class="content-section" id="hindi">
+  <div class="section-heading"><h2>Hindi Movies &amp; TV</h2></div>
+  <div class="movie-row" id="hindiRow"></div>
+</section>
+
+<section class="content-section">
+  <div class="section-heading"><h2>Exciting Movies</h2></div>
+  <div class="movie-row" id="excitingRow"></div>
+</section>
+
+<section class="content-section" id="romantic">
+  <div class="section-heading"><h2>Romantic Movies</h2></div>
+  <div class="movie-row" id="romanticRow"></div>
+</section>
+
+<section class="content-section">
+  <div class="section-heading"><h2>Only on NETFIX</h2></div>
+  <div class="movie-row" id="onlyNetflixRow"></div>
+</section>
+
+<section class="content-section">
+  <div class="section-heading"><h2>Emotional Movies</h2></div>
+  <div class="movie-row" id="emotionalRow"></div>
+</section>
+
+<section class="content-section" id="games">
+  <div class="section-heading"><h2>NETFIX Games</h2><span class="section-note">Play anywhere</span></div>
+  <div class="games-grid">
+    <div class="game-card"><span>🎮</span><h3>Stranger Things: Puzzle Tales</h3><p>Story-driven puzzle adventure.</p><button class="btn btn-red" onclick="alert('Game demo coming soon!')">Play</button></div>
+    <div class="game-card"><span>🏎️</span><h3>NETFIX Racing</h3><p>Fast tracks and competitive racing.</p><button class="btn btn-red" onclick="alert('Game demo coming soon!')">Play</button></div>
+    <div class="game-card"><span>🧠</span><h3>Mind Bender</h3><p>Quick challenges for your brain.</p><button class="btn btn-red" onclick="alert('Game demo coming soon!')">Play</button></div>
+  </div>
+</section>
+
+<section class="content-section" id="languages">
+  <div class="section-heading"><h2>Browse by Languages</h2></div>
+  <div class="language-grid">
+    <a href="search.html?genre=Drama">Hindi</a><a href="search.html?genre=Action">English</a><a href="search.html?genre=Romance">Korean</a><a href="search.html?genre=Adventure">Tamil</a><a href="search.html?genre=Drama">Telugu</a><a href="search.html?genre=Thriller">Malayalam</a><a href="search.html?genre=Drama">Marathi</a><a href="search.html?genre=Comedy">Spanish</a>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="section-heading"><h2>All Movies</h2></div>
+  <div class="movie-row" id="moviesRow"></div>
+</section>
+</main>
+
+<footer class="netflix-footer">
+  <div class="footer-top"><a href="index.html" class="logo">NET<span>FLIX</span></a><span>Questions? Visit the Help Centre.</span></div>
+  <div class="footer-links"><a href="#">FAQ</a><a href="#">Help Centre</a><a href="#">Account</a><a href="#">Media Centre</a><a href="#">Investor Relations</a><a href="#">Jobs</a><a href="#">Privacy</a><a href="#">Cookie Preferences</a><a href="#">Terms of Use</a><a href="#">Contact Us</a></div>
+  <div class="footer-bottom"><select><option>English</option><option>Hindi</option></select><p>© 2026 NETFIX Student Project • Built with HTML, CSS and JavaScript</p></div>
+</footer>
+
+<script src="app.js"></script>
+<script>
+document.getElementById("profileTrigger")?.addEventListener("click", function(e){
+  e.stopPropagation();
+  document.querySelector(".profile-switcher-menu").classList.toggle("show");
+});
+document.addEventListener("click", function(){
+  document.querySelector(".profile-switcher-menu")?.classList.remove("show");
+});
+</script>
+</body>
+</html>

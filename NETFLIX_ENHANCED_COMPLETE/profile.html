@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NETFIX - Profile</title>
+<link rel="stylesheet" href="style.css"><link rel="stylesheet" href="premium.css"><link rel="stylesheet" href="profile.css"><link rel="stylesheet" href="home.css">
+</head>
+<body class="app-page">
+<header class="app-navbar netflix-navbar">
+<a href="home.html" class="logo">NET<span>FLIX</span></a>
+<nav class="main-nav"><a href="home.html">Home</a><a href="home.html#shows">Shows</a><a href="home.html#movies">Movies</a><a href="home.html#games">Games</a><a href="home.html#new-popular">New &amp; Popular</a><a href="mylist.html">My List</a></nav>
+<div class="nav-tools"><a class="nav-icon" href="search.html">⌕</a><div class="profile-switcher"><button class="profile-trigger" id="profileTrigger"><span class="avatar" id="navAvatar">G</span><span>⌄</span></button><div class="profile-switcher-menu" id="profileMenu"><div id="profilesHeaderList"></div><a class="manage-profiles" href="profile.html">Manage Profiles</a></div></div></div>
+</header>
+
+<main class="profile-page">
+<section class="profile-hero">
+<div class="profile-avatar-big" id="profileAvatar">A</div>
+<div><p class="eyebrow">YOUR NETFIX PROFILE</p><h1 id="profileName">Guest</h1><p id="profileEmail">guest@netfix.com</p><div class="profile-badges"><span>✓ Verified</span><span id="profilePlanBadge">Premium</span></div></div>
+</section>
+
+<section class="profile-grid">
+<div class="profile-card profile-wide">
+<h2>Account Details</h2><div class="form-grid">
+<label>Name<input type="text" id="profileNameInput"></label><label>Email<input type="email" id="profileEmailInput" readonly></label>
+</div><button class="btn btn-red" id="saveProfile">Save Changes</button>
+</div>
+
+<div class="profile-card">
+<h2>Profiles</h2><p class="muted">Switch between family or friends profiles.</p><div id="profilesList" class="profiles-list"></div><button class="btn btn-secondary full" id="addProfile">＋ Add Profile</button>
+</div>
+
+<div class="profile-card">
+<h2>Membership</h2><div class="plan-box"><span>Current plan</span><strong id="profilePlan">Premium</strong><small>Unlimited entertainment on this demo account.</small></div><button class="btn btn-secondary full" id="changePlan">Change Plan</button>
+</div>
+
+<div class="profile-card">
+<h2>Playback Preferences</h2>
+<label class="switch-row"><span>Autoplay next episode</span><input type="checkbox" checked></label>
+<label class="switch-row"><span>Autoplay previews</span><input type="checkbox" checked></label>
+<label class="switch-row"><span>Data saver</span><input type="checkbox"></label>
+</div>
+
+<div class="profile-card">
+<h2>Account &amp; Activity</h2><div class="quick-actions"><a href="mylist.html">❤️ My List</a><a href="history.html">◷ Watch History</a><a href="search.html">⌕ Browse Movies</a></div>
+</div>
+
+<div class="profile-card danger-card">
+<h2>Sign Out</h2><p class="muted">Sign out from this browser. Your demo account data remains stored until you clear browser storage.</p><button class="btn btn-danger" id="logoutBtn">Sign Out</button>
+</div>
+</section>
+</main>
+<script src="app.js"></script>
+<script src="profile.js"></script>
+<script>
+document.getElementById("profileTrigger")?.addEventListener("click",e=>{e.stopPropagation();document.getElementById("profileMenu").classList.toggle("show");});
+document.addEventListener("click",()=>document.getElementById("profileMenu")?.classList.remove("show"));
+</script>
+</body>
+</html>

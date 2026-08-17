@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NETFLIX - Search</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="premium.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="feature.css">
+</head>
+<body class="app-page">
+<header class="app-navbar">
+    <a href="home.html" class="logo">NET<span>FLIX</span></a>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="search.html" class="active">Search</a>
+        <a href="mylist.html">My List</a>
+    </nav>
+    <div class="profile-mini"><span id="navUser">Guest</span><a href="profile.html" class="avatar" id="navAvatar">A</a></div>
+</header>
+
+<main class="search-page">
+    <section class="search-box">
+        <p class="eyebrow">DISCOVER YOUR NEXT FAVORITE</p>
+        <h1>What do you want to watch?</h1>
+        <div class="search-input-wrap">
+            <input type="search" id="searchInput" placeholder="Search movies, shows or genres...">
+            <button class="btn btn-red" id="searchButton">Search</button>
+        </div>
+
+        <div class="filter-bar">
+            <select id="genreFilter">
+                <option value="all">All Genres</option>
+            </select>
+            <select id="yearFilter">
+                <option value="all">All Years</option>
+            </select>
+            <select id="ratingFilter">
+                <option value="all">Any Rating</option>
+                <option value="5">5 Stars</option>
+                <option value="4">4+ Stars</option>
+                <option value="3">3+ Stars</option>
+            </select>
+            <select id="sortFilter">
+                <option value="default">Sort: Default</option>
+                <option value="newest">Newest First</option>
+                <option value="oldest">Oldest First</option>
+                <option value="az">A-Z</option>
+            </select>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="section-heading"><h2 id="resultsTitle">Explore</h2></div>
+        <div class="search-grid" id="searchResults"></div>
+    </section>
+</main>
+<script src="app.js"></script>
+<script src="search.js"></script>
+</body>
+</html>
