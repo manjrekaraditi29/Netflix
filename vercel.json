@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "NETFLIX_ENHANCED_COMPLETE/server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "NETFLIX_ENHANCED_COMPLETE/server.js"
+    }
+  ]
+}
