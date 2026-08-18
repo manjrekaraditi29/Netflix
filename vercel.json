@@ -2,14 +2,18 @@
   "version": 2,
   "builds": [
     {
-      "src": "NETFLIX_ENHANCED_COMPLETE/server.js",
+      "src": "api/index.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
+      "src": "/api/(.*)",
+      "dest": "api/index.js"
+    },
+    {
       "src": "/(.*)",
-      "dest": "NETFLIX_ENHANCED_COMPLETE/server.js"
+      "dest": "/NETFLIX_ENHANCED_COMPLETE/$1"
     }
   ]
 }
